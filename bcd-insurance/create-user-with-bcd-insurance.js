@@ -1,5 +1,5 @@
-
 /*******************************************
+* 
 * This script processes event input data to submit lead information to an API. 
 * It extracts necessary contact details from the event input fields and sends this data to the leads API. 
 * If the submission is successful, it logs a success message to the console; 
