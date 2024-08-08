@@ -1,4 +1,3 @@
-
 /*******************************************
 * 
 * This script creates and updates users in Chameleon.io platform
