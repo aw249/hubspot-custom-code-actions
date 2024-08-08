@@ -6,7 +6,6 @@
 *
 *******************************************/
 
-
 const axios = require('axios');
 
 exports.main = async (event, callback) => {
@@ -23,3 +22,4 @@ exports.main = async (event, callback) => {
         callback({ outputFields: { email_validation_data: null } });
     }
 };
+
