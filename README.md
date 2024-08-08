@@ -58,4 +58,4 @@ exports.main = async (event, callback) => {
     console.error('Error:', error);
     callback({ message: 'Error', error: error });
   }
-};```
+};
