@@ -1,3 +1,13 @@
+/*******************************************
+* This script takes input data from an event, including postcodes or coordinates, and uses the Mapbox API to:
+*
+* Geocode postcodes into coordinates if necessary.
+* Calculate a driving route between the provided coordinates.
+* Generate a static map URL showing the route.
+* Finally, it returns the URL of the static map image with the styles.
+* 
+*******************************************/
+
 const axios = require('axios');
 
 // Environment variables
