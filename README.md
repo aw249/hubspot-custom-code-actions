@@ -27,7 +27,6 @@ Example
 Here’s a simple example of a custom code action that logs the email address of a contact:
 
 javascript
-Copy code
 const hubspot = require('@hubspot/api-client');
 
 // Initialize the HubSpot API client
