@@ -2,9 +2,6 @@
 /*******************************************
 * 
 * This script creates and updates users in Chameleon.io platform
-* 
-* License: GNU GPLv3
-* Copyright: 2024 Alex Woodbridge
 *
 *******************************************/
 
