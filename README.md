@@ -1,7 +1,5 @@
 # HubSpot Custom Code Actions
 
-![HubSpot](https://cdn2.hubspot.net/hubfs/53/image8-2.jpg)
-
 ## Overview
 
 This repository contains code and examples for creating custom code actions in HubSpot workflows. Custom code actions allow you to extend the functionality of HubSpot workflows with serverless functions written in JavaScript.
