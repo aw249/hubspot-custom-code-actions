@@ -32,22 +32,23 @@ const hubspot = require('@hubspot/api-client');
 // Initialize the HubSpot API client
 const hubspotClient = new hubspot.Client({ apiKey: process.env.HUBSPOT_API_KEY });
 
-exports.main = async (event, callback) => {
-  try {
-    // Retrieve the contact's email from the event
-    const email = event.object.properties.email;
-    console.log(`Contact email: ${email}`);
+* exports.main = async (event, callback) => {
+*  try {
+*    // Retrieve the contact's email from the event
+*    const email = event.object.properties.email;
+*    console.log(`Contact email: ${email}`);
+*
+*    // Perform any other logic or external API calls here
+*
+*    // Return success
+*    callback({ message: 'Success' });
+*  } catch (error) {
+*    // Handle any errors
+*    console.error('Error:', error);
+*    callback({ message: 'Error', error: error });
+*  }
+* };
 
-    // Perform any other logic or external API calls here
-
-    // Return success
-    callback({ message: 'Success' });
-  } catch (error) {
-    // Handle any errors
-    console.error('Error:', error);
-    callback({ message: 'Error', error: error });
-  }
-};
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request to contribute to this project.
 
