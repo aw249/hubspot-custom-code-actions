@@ -9,9 +9,6 @@
 * 
 * Website this relates to: https://www.businesschoicedirect.co.uk/
 * 
-* License: GNU GPLv3
-* Copyright: 2024 Alex Woodbridge
-* 
 *******************************************/
 
 const axios = require('axios');
