@@ -71,41 +71,47 @@ async function getOwnerDetails(ownerId) {
   }
 }
 
-// Main function to check if the contact owner is deactivated
-async function checkContactOwner(contact) {
+// Function to check if the contact owner is deactivated and call the callback
+async function checkContactOwner(contact, callback) {
   const ownerId = contact.properties.hubspot_owner_id;
   if (!ownerId) {
     console.log('Contact does not have an owner.');
+    callback({ outputFields: { owner_status: 'unknown' } }); // Edge case if no owner is present
     return;
   }
 
   const owner = await getOwnerDetails(ownerId);
   if (!owner) {
     console.error('Owner not found.');
+    callback({ outputFields: { owner_status: 'unknown' } }); // If owner is not found, consider it unknown
     return;
   }
 
   if (owner.deactivated) {
     console.log(`The contact owner (ID: ${ownerId}) is deactivated.`);
+    callback({ outputFields: { owner_status: 'deactivated' } });
   } else {
     console.log(`The contact owner (ID: ${ownerId}) is active.`);
+    callback({ outputFields: { owner_status: 'active' } });
   }
 }
 
 // Execute function for external invocation
-async function execute(event) {
+async function execute(event, callback) {
   try {
     const contactEmail = event.inputFields['email'];
     console.log(`Finding contact by email: ${contactEmail}`);
     const contact = await findContactByIdEmail(contactEmail);
     if (contact) {
       console.log(`Contact found: ${JSON.stringify(contact)}`);
-      await checkContactOwner(contact);
+      await checkContactOwner(contact, callback);
     } else {
       console.log('Contact not found.');
+      callback({ outputFields: { owner_status: 'unknown' } });
     }
   } catch (error) {
     console.error('Error:', error.message);
+    callback({ outputFields: { owner_status: 'error' } }); // Callback in case of an error
   }
 }
 
