@@ -2,7 +2,6 @@
 * 
 * This is an early version of a script that checks if the contact owner is active or deactviated
 * 
-* License: GNU GPLv3
 * Copyright: 2024 Alex Woodbridge
 *
 *******************************************/
