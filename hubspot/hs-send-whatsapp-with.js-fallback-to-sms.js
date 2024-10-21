@@ -13,7 +13,7 @@ const DATADOG_API_KEY = process.env.DATADOG_API_KEY;
 
 // Configurable values
 const MESSAGING_SERVICE_SID = 'MG76b9f2a3080090cb14a5e5ae516f17c2'; // Twilio Messaging Service SID
-const WHATSAPP_FROM_NUMBER = 'whatsapp:+447412915580'; // WhatsApp "From" number
+const WHATSAPP_FROM_NUMBER = 'whatsapp:+447412915580'; // TP WhatsApp "From" number
 const CONTENT_TEMPLATE_SID = 'HXc9fbf190626326e4c55955c56ef8fd73'; // WhatsApp Content Template SID
 const SMS_SENDER_ID = 'AnyVan'; // SMS Sender ID
 
